@@ -14,7 +14,7 @@ describe('Sample noir circuit tests using typescript wrapper', function() {
 
     it("Verify successfully for correct input", async () => {
         
-        let inputs = {x : 5, y: 6};
+        let inputs = {x : 5, y: 6, z: 11};
         const witness = await noir.generateWitness(inputs);
         const proof = await noir.generateProof(witness);
         

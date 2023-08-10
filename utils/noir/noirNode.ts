@@ -50,6 +50,7 @@ export class NoirNode {
     const initialWitness = new Map<number, string>();
     initialWitness.set(1, ethers.utils.hexZeroPad(`0x${input.x.toString(16)}`, 32));
     initialWitness.set(2, ethers.utils.hexZeroPad(`0x${input.y.toString(16)}`, 32));
+    initialWitness.set(3, ethers.utils.hexZeroPad(`0x${input.z.toString(16)}`, 32));
 
     const witnessMap = await executeCircuit(this.acirBuffer, initialWitness, () => {
       throw Error('unexpected oracle');
